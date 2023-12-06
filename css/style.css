@@ -1,0 +1,312 @@
+body {
+  background: #FFFFFF;
+  color: #000000;
+  font-family: Poppins, sans-serif;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em 0.5em;
+  line-height: 120%;
+}
+
+.nav-links li.active a {
+  font-weight: bolder;
+  background-color: #ffffff;
+  font-size: 1.5em;
+  color: #286FB4;
+}
+
+h2 {
+  font-size: 1.2em;
+  text-decoration: underline #DF4C73 0.2em;
+  text-decoration-skip-ink: none;
+}
+
+.skip a {
+  position: absolute;
+  top: -40px;
+}
+
+.skip a:focus {
+  top: 20px;
+}
+
+.item {
+  display: flex;
+}
+
+.item .image {
+  padding: 1em 1em 1em 0;
+}
+
+.item .image > div {
+  position: relative;
+  text-align: center;
+  line-height: 120%;
+  font-weight: bolder;
+}
+
+.item .image img {
+  border-radius: 1em;
+  height: 5em;
+}
+
+.item .image span {
+  display: block;
+  background: #ffffff;
+  clear: both;
+  padding-top: 1em;
+  margin: 0;
+}
+
+.item .details {
+  position: relative;
+  flex-grow: 1;
+}
+
+.item .details > div{
+  border-radius: 1em;
+  padding: 1.5em;
+  margin: 1em 0;
+  background-color: #E2F0F9;
+}
+
+.item .details > div h1 {
+  color: #000000;
+  text-decoration: underline #DF4C73 0.2em;
+  font-size: 1.4em;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.1em;
+  text-decoration-skip-ink: none;
+}
+
+.item .details > div h2 {
+  color: #000000;
+  font-size: 1em;
+  padding-top: 0.5em;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+  
+.item .details > div ul li {
+  margin: 0;
+  padding: 0;
+  line-height: 150%;
+  padding-top: 0.8em;
+}
+
+header{
+  display: grid;
+  grid-template-columns: 3fr 0.5fr 5fr;
+  grid-column-gap: 1em;
+  padding-bottom: 1em;
+  align-items: center;
+}
+
+header h1{
+  font-size: 3em;
+  color: #286FB4;
+  text-decoration: underline #DF4C73 0.1em;
+  text-underline-offset: 0.1em;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0.5em;
+  border-radius: 5em;
+  justify-content: space-around;
+  border: #286FB4 0.2em solid;
+}
+.nav-links li{
+  list-style: none;
+  margin: 0.5em 1em;
+}
+.nav-links li a{
+  position: relative;
+  color: #286FB4;
+  font-size: 0.8em;
+  font-weight: 500;
+  padding: 6px 0;
+  text-decoration: none;
+  font-weight: 900;
+}
+.nav-links li a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #286FB4;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+.nav-links li a:hover:before{
+  width: 100%;
+}
+.nav-links li a:before{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.highlight {
+  display: grid;
+  grid-template-columns: 7fr 4fr 4fr 3fr;
+  grid-column-gap: 1em;
+  align-items: baseline;
+}
+
+label{
+  font-size: 1em;
+}
+
+.school-info:nth-child(odd) {
+  background-color: #B0DDE4;
+  padding: 0 3em 0 3em;
+  margin: 0em;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  opacity: 0.8;
+}
+
+.school-info:nth-child(even) {
+  background-color: #E2F0F9;
+  padding: 0 3em 0 3em;
+  margin: 0em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  opacity: 0.8;
+}
+
+.education-section {
+  margin: 0 auto;
+  border-radius: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0;
+}
+
+.education-section ul li {
+  line-height: 150%;
+}
+
+#education1{
+  position: relative;
+  background-image: url('../images/um_campus.jpeg');
+  background-color: #E2F0F9;
+}
+
+#education2 {
+position: relative;
+background-image: url('../images/ntu_campus.jpeg');
+background-color: #E2F0F9;
+}
+
+#education3{
+position: relative;
+background-image: url('../images/ntu_campus_1.jpeg');
+background-color: #E2F0F9;
+}
+
+#education1 .grid-container,
+#education2 .grid-container,
+#education3 .grid-container {
+  position: relative;
+  z-index: 1;
+}
+
+#education1 .school-info,
+#education3 .school-info {
+  background-color: #B0DDE4;
+  padding: 0 3em;
+  margin: 0;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+#education1:hover .school-info,
+#education3:hover .school-info {
+  transform: translateX(100%);
+  border-top-left-radius: 0em;
+  border-bottom-left-radius: 0em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+#education2 .school-info {
+  background-color: #E2F0F9;
+  padding: 0 3em;
+  margin: 0;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+#education2:hover .school-info{
+  transform: translateX(-100%);
+  border-top-right-radius: 0em;
+  border-bottom-right-radius: 0em;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+.collapsible {
+  background-color: #B0DDE4;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  border-radius: 2em;
+  margin-bottom: 0.2em;
+}
+
+.active, .collapsible:hover {
+  background-color: #B0DDE4;
+}
+
+.content {
+  padding: 0 1em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #E2F0F9;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    padding: 2em 4em;
+  }
+  header h1{
+    font-size: 3em;
+    color: #286FB4;
+    text-decoration: underline #DF4C73 0.1em;
+    text-underline-offset: 0.1em;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+}

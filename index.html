@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Liang's Portflio</title>
+</head>
+<body>
+  <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+        <h1>LIANG SIE</h1>
+        <span></span>
+        <ul class="nav-links">
+            <li class="active"><a href="index.html">WORK EXPERIENCE</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="project.html">WORK SAMPLE</a></li>
+        </ul>
+        
+    </header>
+   
+    <main>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const highlightNumbersCheckbox = document.getElementById('highlightNumbersCheckbox');
+                const highlightSkillsCheckbox = document.getElementById('highlightSkillsCheckbox');
+
+                const highlightNumbers = () => {
+                    const numberElements = document.querySelectorAll('.details ul li .number');
+                    numberElements.forEach(element => {
+                        element.style.fontWeight = 'bold';
+                        element.style.fontSize = "x-large";
+                        // element.style.textDecoration = 'underline 0.2em';
+                    });
+                };
+
+                const highlightSkills = () => {
+                    const highlightElements = document.querySelectorAll('.details ul li .skills');
+                    highlightElements.forEach(element => {
+                        element.style.fontWeight = 'bold';
+                        element.style.background = '#B0DDE4';
+                    });
+                };
+
+                highlightNumbersCheckbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        highlightNumbers();
+                    } else {
+                        const numberElements = document.querySelectorAll('.details ul li .number');
+                        numberElements.forEach(element => {
+                            element.style.fontWeight = 'normal';
+                            element.style.fontSize = "1em";
+                        });
+                    }
+                });
+
+                highlightSkillsCheckbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        highlightSkills();
+                    } else {
+                        const highlightElements = document.querySelectorAll('.details ul li .skills');
+                        highlightElements.forEach(element => {
+                            element.style.fontWeight = 'normal';
+                            element.style.color = '#000000';
+                            element.style.background = 'none';
+                        });
+                    }
+                });
+            });
+            </script>
+        <div class="highlight">
+        <h1>Work Experience</h1>
+        <label>
+            <input type="checkbox" id="highlightSkillsCheckbox"> Highlight Skills
+        </label>
+        <label>
+            <input type="checkbox" id="highlightNumbersCheckbox"> Highlight Numbers
+        </label>
+    </div>
+        <div class="item">
+            <div class="image">
+              <div>
+                <img src="images/LCE.jpeg" alt="Little Caesars Logo" />
+                <span>
+                May 2023 <br>
+                &#9662;<br>
+                Aug 2023
+                </span>
+              </div>
+            </div>
+            <div class="details">
+              <div>
+                <h1>Data Ananlytics Intern</h1>
+                <h2>Little Caesars</h2>
+                <h2>Detroit, Michigan</h2>
+                <ul>
+                    <li>Developed <span class = 'skills'>PySpark</span> data pipelines in <span class = 'skills'>Databricks</span>, resulting in a <span class = 'number'>30%</span> improvement in data processing efficiency for aggregating
+                        and summarizing pizza sales data at the store level. This initiative empowered the organization with unparalleled insights into
+                        sales performance and trends.</li>
+                    <li>Integrated transformed data from <span class = 'skills'>PySpark</span> into <span class = 'skills'>PowerBI</span>. Used <span class = 'skills'>DAX</span> function to design dynamic and interactive dashboards.
+                        Provided franchisees and corporate colleagues with immediate insights driven by sophisticated calculations.</li>
+                </ul>
+                </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="image">
+              <div>
+                <img src="images/UM.jpeg" alt="UMich Logo" />
+                <span>
+                    Aug 2022 <br>
+                    &#9662;<br>
+                    Dec 2023
+                    </span>
+                  </div>
+                </div>
+                <div class="details">
+                  <div>
+                    <h1>Graduate Student Instructor</h1>
+                    <h2>University of Michigan</h2>
+                    <h2>Ann Arbor, Michigan</h2>
+                    <ul>
+                        <li>Information Visualization course – Designed <span class = 'skills'>Tableau</span> and <span class = 'skills'>Python</span> tutorials, leveraging 4 years of Tableau expertise, to facilitate
+                            understanding for a <span class = 'number'>120</span>-student class. Demonstrated the power of real-time data visualization in driving insights.</li>
+                        <li>Information Analysis Capstone course – Led <span class = 'number'>11</span> teams in applying advanced <span class = 'skills'>SQL</span> and <span class = 'skills'>Tableau</span> knowledge to deliver data-driven
+                            solutions for real-world clients. Transformed abstract concepts into actionable insights.</li>
+                    </ul>
+                    </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="image">
+              <div>
+                <img src="images/RFOX.jpeg" alt="RFOX Logo"/>
+                <span>
+                    Jul 2021 <br>
+                    &#9662;<br>
+                    Jul 2022
+                    </span>
+                  </div>
+                </div>
+                <div class="details">
+                  <div>
+                    <h1>Business Intelligence Analyst</h1>
+                    <h2>RFOX</h2>
+                    <h2>Taipei, Taiwn</h2>
+                    <ul>
+                        <li>Engineered data pipelines and <span class = 'skills'>ETL</span> models to extract data from multiple sources using spreadsheets and <span class = 'skills'>APIs</span>. Achieved a <span class = 'number'>90%</span>
+                            reduction in data refresh time, enhancing real-time decision-making capabilities.</li>
+                        <li>Crafted <span class = 'number'>eight</span> data dashboards and reports from the ground up using <span class = 'skills'>SQL</span> and <span class = 'skills'>PowerBI</span>. Implemented <span class = 'skills'>DAX</span> functions to
+                            perform aggregation, generating views based on daily, weekly, and monthly data. Empowered teams with immediate access to
+                            real-time insights into marketing funnels and business KPIs.</li>
+                        <li>Implemented and tested web analytics tags for <span class = 'number'>four</span> marketing campaign websites using <span class = 'skills'>Google Analytics</span>. Conducted in-depth
+                            analysis of web traffic and user behaviors, providing actionable insights to enhance marketing strategies.</li>
+                    </ul>
+                    </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <div>
+                <img src="images/NTU.jpeg" alt="NTU Logo"/>
+                <span>
+                    Sep 2018 <br>
+                    &#9662;<br>
+                    Jun 2021
+                    </span>
+                  </div>
+                </div>
+                <div class="details">
+                  <div>
+                    <h1>Research Assistant</h1>
+                    <h2>National Taiwan University</h2>
+                    <h2>Taipei, Taiwn</h2>
+                    <ul>
+                        <li>Applied advanced analytics, including Principal Component Analysis in <span class = 'skills'>R</span> to extract valuable insights from complex research
+                            datasets. These findings informed strategic decision-making and were presented at the Association for Information Science and
+                            Technology Conference.</li>
+                        <li>Utilized <span class = 'skills'>R</span> for <span class = 'skills'>natural language processing</span> and topic modeling to identify dominant fact-check topics on <span class = 'number'>30k</span> datasets, leading to
+                            acceptance of research paper at the International Communication Association Conference.</li>
+                    </ul>
+                    </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <div>
+                <img src="images/Pinkoi.jpeg" alt="Pinkoi Logo"/>
+                <span>
+                    May 2017 <br>
+                    &#9662;<br>
+                    Jun 2018
+                    </span>
+                  </div>
+                </div>
+                <div class="details">
+                  <div>
+                    <h1>Marketing Intern</h1>
+                    <h2>Pinkoi</h2>
+                    <h2>Taipei, Taiwan</h2>
+                    <ul>
+                        <li>Led social media data analytics efforts, utilizing <span class = 'skills'>Google Analytics</span> to extract key marketing metrics. Leveraged these insights to
+                            refine content strategies and optimize audience reach. Orchestrated a campaign resulting in a video reaching <span class = 'number'>1M</span> users on
+                            Facebook, with an impressive average reach of 20K.</li>
+                    </ul>
+                    </div>
+            </div>
+          </div>
+    </main>
+</body>
+</html>
